@@ -336,9 +336,11 @@ void mcx_prepdomain(char *filename, Config *cfg){
 	}
         mcx_loadseedfile(cfg);
      }
-     for(int i=0;i<MAX_DEVICE;i++)
+     int i;
+     for(i=0;i<MAX_DEVICE;i++){
         if(cfg->deviceid[i]=='0')
            cfg->deviceid[i]='\0';
+     }
 }
 
 
